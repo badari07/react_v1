@@ -9,24 +9,31 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [{
-      loader: 'babel-loader',
-      test: /\.js$/,
-      exclude: /node_modules/
-    }, {
-      test: /\.s?css$/,
-      use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader'
-      ]
-    }
+    rules: [
+      {
+        enforce: 'pre',
+        loader: 'eslint-loader',
+        test: /\.js$/,
+        exclude: /node_modules/
+      },
+      {
+        loader: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/
+      },
+      {
+        loader: 'json-loader',
+        test: /\.json$/
+      },
+      {
+        test: /\.s?css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
     ]
-  },
-  stats:{
-    color:true,
-    reasons:true,
-    chunks:false
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {

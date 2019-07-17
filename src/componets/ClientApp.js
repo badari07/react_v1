@@ -1,12 +1,11 @@
 import React from 'react'
-import Mytitle from './Mytitle'
+import Landing from './Landing'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 const App = () => (
-  <div className='App'>
-    <h3><Mytitle title='this is great learn' color='blue' /></h3>
-    <h3><Mytitle title='this is bad' color='green' /></h3>
-
-  </div>
+  <Router >
+    <Route path='/' component={Landing} />
+  </Router>
 )
 
 export default App
