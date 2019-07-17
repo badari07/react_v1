@@ -11,4 +11,4 @@ class Mytitle extends React.Component {
   }
 }
 
-export default Mytitle;
+export default Mytitle
