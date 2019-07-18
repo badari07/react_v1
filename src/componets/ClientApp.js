@@ -1,10 +1,19 @@
 import React from 'react'
 import Landing from './Landing'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Search from './Search'
+import { Router, Route, Switch } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+
+const history = createBrowserHistory()
 
 const App = () => (
-  <Router >
-    <Route path='/' component={Landing} />
+  <Router history={history}>
+    <div>
+      <Switch>
+        <Route path='/' component={Landing} exact />
+        <Route path='/search' component={Search} />
+      </Switch>
+    </div>
   </Router>
 )
 

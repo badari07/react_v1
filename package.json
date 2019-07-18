@@ -8,7 +8,7 @@
     "server": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "test": "standard"
+    "test": "standard --fix"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -21,9 +21,12 @@
     "css-loader": "0.28.4",
     "eslint-config-standard-react": "^8.0.0",
     "eslint-loader": "^2.2.1",
+    "history": "^4.9.0",
+    "json-loader": "^0.5.7",
     "live-server": "^1.2.1",
     "node-sass": "4.5.3",
     "normalize.css": "^8.0.1",
+    "raw-loader": "^3.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-modal": "2.2.2",

@@ -23,6 +23,7 @@ module.exports = {
       },
       {
         loader: 'json-loader',
+        type: 'javascript/auto',
         test: /\.json$/
       },
       {
