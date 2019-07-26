@@ -8,8 +8,9 @@
     "server": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "test": "standard --fix",
-    "test1": "mocha"
+    "test1": "standard --fix",
+    "test": "mocha  --require babel-register --require babel-polyfill --require test/helpers/setup.js --watch",
+    "nyc": " nyc --reporter=lcov --reporter=text --reporter=html --require babel-register --extension .jsx npm test"
 
   },
   "dependencies": {
@@ -24,15 +25,20 @@
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "css-loader": "0.28.4",
+    "dotenv": "^8.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint-config-standard-react": "^8.0.0",
     "eslint-loader": "^2.2.1",
     "file-loader": "^4.0.0",
     "history": "^4.9.0",
+    "jsdom": "^15.1.1",
     "json-loader": "^0.5.7",
     "live-server": "^1.2.1",
     "mocha": "^6.2.0",
     "node-sass": "4.5.3",
     "normalize.css": "^8.0.1",
+    "nyc": "^14.1.1",
     "prop-types": "^15.7.2",
     "raw-loader": "^3.0.0",
     "react": "^16.8.3",
