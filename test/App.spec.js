@@ -1,4 +1,4 @@
-/*eslint-env mocha */
+/* eslint-env mocha */
 
 // const React = require('react')
 // const Search = require('../src/componets/Search')
@@ -8,10 +8,8 @@ import React from 'react'
 import Search from '../src/componets/Search'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import { shows }  from '../public/data'
+import { shows } from '../public/data'
 import showcard from '../src/componets/ShowCard'
-
-
 
 describe('<search/>', () => {
   it('should render the brand', () => {
@@ -34,4 +32,3 @@ describe('<search/>', () => {
     expect(wrapper.find('.show-card').length).to.equal(2)
   })
 })
-

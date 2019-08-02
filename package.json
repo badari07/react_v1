@@ -10,7 +10,7 @@
     "dev-server": "webpack-dev-server",
     "test1": "standard --fix",
     "test": "mocha  --require babel-register --require babel-polyfill --require test/helpers/setup.js --watch",
-    "nyc": " nyc --reporter=lcov --reporter=text --reporter=html --require babel-register --extension .jsx npm test"
+    "cover": " nyc --reporter=lcov --reporter=text --reporter=html --require babel-register --extension .jsx npm test"
 
   },
   "dependencies": {
